@@ -8,4 +8,5 @@ public class Task_2 {
         System.out.println(y);
 
     }
+    
 }
