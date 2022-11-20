@@ -7,7 +7,9 @@ public class Smartphone {
     Color color;
     Integer price;
 
-    public Smartphone() {}
+    public Smartphone() {
+
+    }
     public Smartphone(String brand, String model, Integer batt_cap, Color color, Integer price) {
         this.brand = brand;
         this.model = model;
@@ -66,4 +68,5 @@ public class Smartphone {
                 ", price=" + price +
                 '}';
     }
+
 }
