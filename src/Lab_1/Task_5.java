@@ -13,3 +13,4 @@ public class Task_5 {
         System.out.println(number3);;
     }
 }
+
