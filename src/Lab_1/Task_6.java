@@ -16,5 +16,6 @@ public class Task_6 {
                 System.out.println("Нечетное");
 
             }
+                
         }
 }
