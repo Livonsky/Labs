@@ -68,5 +68,4 @@ public class Smartphone {
                 ", price=" + price +
                 '}';
     }
-
 }

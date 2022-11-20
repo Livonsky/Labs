@@ -14,7 +14,5 @@ public class Main {
         Iphone.setPrice(100000);
 
         System.out.println(Iphone);
-
-
     }
 }

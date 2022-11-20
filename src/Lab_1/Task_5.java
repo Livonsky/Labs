@@ -11,6 +11,5 @@ public class Task_5 {
         System.out.println(number1);
         System.out.println(number2);
         System.out.println(number3);;
-
     }
 }
