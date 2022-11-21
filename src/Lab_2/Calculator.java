@@ -2,10 +2,9 @@ package Lab_2;
 
 public class Calculator {
     public static void main(String[] args) {
-        System.out.println(add(1, 4));
-        System.out.println(mult(1.4, 4.6));
-        System.out.println(div(1., 4.));
-        System.out.println(sub(1, 4));
+        System.out.println(div((long) 1, (long) 4));
+        System.out.println(div(1., 4));
+        System.out.println(div(1, 4));
     }
     static int add(int number1, int number2) {
         int result = number1 + number2;
@@ -58,8 +57,8 @@ public class Calculator {
 
     //mult -- Умножение
 
-    static int div(int number1, int number2) {
-        int result = number1 / number2;
+    static double div(int number1, int number2) {
+        double result = (double) number1 / number2;
         return result;
     }
 
@@ -68,9 +67,10 @@ public class Calculator {
         return result;
     }
 
-    static long div(long number1, long number2) {
-        long result = number1 / number2;
+    static double div(long number1, long number2) {
+        double result = (double) number1 / number2;
         return result;
+
     }
 
     //div -- Деление
