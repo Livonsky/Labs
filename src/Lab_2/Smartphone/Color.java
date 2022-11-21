@@ -6,3 +6,4 @@ public enum Color {
     SILVER,
     GREEN
 }
+

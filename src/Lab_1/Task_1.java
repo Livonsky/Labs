@@ -6,7 +6,5 @@ public class Task_1 {
         System.out.println("хорошо");
         System.out.println("знаю");
         System.out.println("Java");
-
     }
-    
 }
