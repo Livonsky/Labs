@@ -6,5 +6,4 @@ public class Task_3 {
         double result = (number/10.) / 10;
         System.out.println(result);
     }
-
 }

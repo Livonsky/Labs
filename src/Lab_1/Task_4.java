@@ -8,5 +8,4 @@ public class Task_4 {
         double result = a * b * c;
         System.out.println(result);
     }
-
 }
