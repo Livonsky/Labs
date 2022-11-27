@@ -7,7 +7,7 @@ public class House {
 
     public static void main(String[] args){
         House house1 = new House (24, 1980, "123");
-        house1.culc();
+        house1.getYearDiff();
 
     }
 
@@ -31,7 +31,7 @@ public class House {
                 '}';
     }
 
-    public Integer culc(){
+    public Integer getYearDiff(){
     Integer diff = 2022 - year;
     System.out.println(diff);
     return diff;

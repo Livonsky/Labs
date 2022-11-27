@@ -15,3 +15,9 @@ O
 src/Lab_2/Smartphone/Color.java,9\0\9046d66a278ddb224472a2c0c4b1111bcc60e402
 J
 Labs/src/Lab_1/Task_1.java,8\0\801b8f10adbb2d23cf3794b4ef912dad5753279e
+T
+$src/Lab_2/Smartphone/Smartphone.java,a\6\a6fd22c91d00e7ed09c78b279f8d6fa5fdef6157
+N
+src/Lab_2/Smartphone/Main.java,f\3\f3768c94a687a6f31199241622c2485c969994f2
+K
+src/Lab_3/Task_1/Study.java,2\d\2de2dd41a76bf0759420d0a394d826bece01c637

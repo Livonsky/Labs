@@ -64,10 +64,10 @@ public class Vehicle {
 
 class main{
        public static void main (String[] args) {
-        Vehicle vehicle1 = new Vehicle("BWM", 1200, Color.White);
-        Vehicle vehicle2 = new Vehicle("Lada", 1000, Color.Black);
-        Vehicle vehicle3 = new Vehicle(Color.Black);
-        Vehicle vehicle4 = new Vehicle(1200,  Color.White);
+        Vehicle vehicle1 = new Vehicle("BWM", 1200, Color.WHITE);
+        Vehicle vehicle2 = new Vehicle("Lada", 1000, Color.BLACK);
+        Vehicle vehicle3 = new Vehicle(Color.BLACK);
+        Vehicle vehicle4 = new Vehicle(1200,  Color.WHITE);
         Vehicle vehicle5 = new Vehicle();
         vehicle1.outputData();
         vehicle2.outputData();
