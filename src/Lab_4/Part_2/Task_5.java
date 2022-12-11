@@ -1,73 +1,57 @@
 package Lab_4.Part_2;
 
 public class Task_5 {
-    public static void main(String[] params) {
-        int[] array = new int[] {15,78,89,9,12,12546,8,879,16,54,1};
-        System.out.println(arrayToString(array));
-        array = mergeSort(array);
-        System.out.println(arrayToString(array));
+    public static void main(String[] args) {
+        int [] nums = {59, 69, 77, 16, 14, 31, 66, 81, 13, 70, 62, 32, 10, 3, 30, 94, 83, 50, 18, 78, 2, 88, 90, 63, 85, 41, 34, 72, 65, 80, 58, 45, 22, 76, 6, 87, 61, 82,
+                97, 44, 91, 4, 68, 37, 75, 99, 43, 48, 71, 92, 35, 36, 46, 29, 9, 33, 47, 54, 42, 73, 53, 89, 15, 5, 86, 60, 95, 24, 55, 84, 19, 56, 11, 21, 20, 38, 12,
+                74, 96, 27, 39, 40, 79, 93, 52, 98, 67, 8, 28, 1, 7, 17, 49, 57, 25, 64, 26, 23, 100};
+        mergeSort(nums);
+
+        for(int i = 0; i < nums.length; i++)
+            System.out.print(nums[i] + " ");
     }
 
-    public static int[] mergeSort(int[] array) {
-        int[] tmp;
-        int[] currentSrc = array;
-        int[] currentDest = new int[array.length];
+    private static void mergeSort(int[] arr) {
+        int n = arr.length;
+        if (n == 1) return;
+        int mid = n / 2;
+        int[] l = new int[mid];
+        int[] r = new int[n - mid];
 
-        int size = 1;
-        while (size < array.length) {
-            for (int i = 0; i < array.length; i += 2 * size) {
-                merge(currentSrc, i, currentSrc, i + size, currentDest, i, size);
-            }
+        for (int i = 0; i < mid; i++)
+            l[i] = arr[i];
+        for (int i = mid; i < n; i++)
+            r[i - mid] = arr[i];
 
-            tmp = currentSrc;
-            currentSrc = currentDest;
-            currentDest = tmp;
-
-            size = size * 2;
-
-            System.out.println(arrayToString(currentSrc));
-        }
-        return currentSrc;
+        mergeSort(l);
+        mergeSort(r);
+        merge(arr, l, r);
     }
 
-    private static void merge(int[] src1, int src1Start, int[] src2, int src2Start, int[] dest,
-                              int destStart, int size) {
-        int index1 = src1Start;
-        int index2 = src2Start;
+    private static void merge(int[] arr, int[] l, int[] r) {
+        int left = l.length;
+        int right = r.length;
+        int i = 0;
+        int j = 0;
+        int idx = 0;
 
-        int src1End = Math.min(src1Start + size, src1.length);
-        int src2End = Math.min(src2Start + size, src2.length);
-
-        if (src1Start + size > src1.length) {
-            for (int i = src1Start; i < src1End; i++) {
-                dest[i] = src1[i];
-            }
-            return;
-        }
-
-        int iterationCount = src1End - src1Start + src2End - src2Start;
-
-        for (int i = destStart; i < destStart + iterationCount; i++) {
-            if (index1 < src1End && (index2 >= src2End || src1[index1] < src2[index2])) {
-                dest[i] = src1[index1];
-                index1++;
+        while (i < left && j < right) {
+            if (l[i] < r[j]) {
+                arr[idx] = l[i];
+                i++;
+                idx++;
             } else {
-                dest[i] = src2[index2];
-                index2++;
+                arr[idx] = r[j];
+                j++;
+                idx++;
             }
-        }
-    }
 
-    private static String arrayToString(int[] array) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("[");
-        for (int i = 0; i < array.length; i++) {
-            if (i > 0) {
-                sb.append(", ");
-            }
-            sb.append(array[i]);
         }
-        sb.append("]");
-        return sb.toString();
+
+        for (int ll = i; ll < left; ll++)
+            arr[idx++] = l[ll];
+
+        for (int rr = j; rr < right; rr++)
+            arr[idx++] = r[rr];
     }
 }
